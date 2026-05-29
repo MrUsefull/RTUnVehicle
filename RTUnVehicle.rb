@@ -49,7 +49,7 @@ begin
     def saveFile(oldLanceFolder, newLanceFolder, jsonObject, file, writeUntouchedFile)
         newFileName = file.sub(oldLanceFolder, newLanceFolder)
         newPath = File.dirname(newFileName)        
-        Dir.mkdir(newPath) unless File.exists?(newPath)
+        Dir.mkdir(newPath) unless File.exist?(newPath)
         if (writeUntouchedFile)
             log("Writing existing file untouched: " + newFileName)
             File.write(newFileName, File.read(file))            
@@ -85,7 +85,7 @@ begin
     #main script
     begin
         #create NewLances folder if it doesnt exist yet
-        Dir.mkdir(newLanceFolder) unless File.exists?(newLanceFolder)
+        Dir.mkdir(newLanceFolder) unless File.exist?(newLanceFolder)
 
         #for each Lance json from the RogueTech files, loop through looking for ones that arent entirely vehicle specific
         lanceFiles.each do |file|
