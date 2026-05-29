@@ -391,6 +391,6 @@ class DefaultMechs
     DEFAULTCONFIG = 1
 
     def self.getDefaultMech(type)
-        DEFAULTMECHLIST.fetch(type, DEFAULTCONFIG)
+        DEFAULTMECHLIST.fetch(type, DEFAULTMECHLIST[DEFAULTCONFIG])
     end
 end

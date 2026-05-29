@@ -3,10 +3,11 @@ begin
     require 'fileutils'
     require 'date'
     require_relative 'DefaultMechs'
+    require_relative 'LanceFileProcessor'
 
     #Setting up initial variables
     begin
-        lanceFiles = Dir.glob("./Lances/*/*.json")
+        lanceFiles = Dir.glob("./Lances/**/*.json")
     rescue => exception
         #if the user forgot to copy the Lances file, or if we cant read it for some reason
         #tell them, and then exit the script since nothing will work properly
@@ -27,36 +28,12 @@ begin
     removeVTOLs = false
     userWantsToRemoveVTOLs = ""
     
-    #Message logging method
-    def log (logMessage)
-        begin
-            time = Time.new
-            logString = "[" + time.strftime("%H:%M:%S %d-%m-%Y") + "] " + logMessage
-
-            File.open(@logFile, "a") do |f|
-                f.puts logString.to_s        
-            end
-            puts logString
-        rescue => exception
-            puts exception.to_s
-            puts "Cannot write log file!!"
-            puts "Are you sure you have placed the script in a directory you have read/write access to?"
-            exit 0
-        end
+    def log(logMessage)
+        LanceFileProcessor.log(@logFile, logMessage)
     end
 
-    #file writer method
     def saveFile(oldLanceFolder, newLanceFolder, jsonObject, file, writeUntouchedFile)
-        newFileName = file.sub(oldLanceFolder, newLanceFolder)
-        newPath = File.dirname(newFileName)        
-        Dir.mkdir(newPath) unless File.exist?(newPath)
-        if (writeUntouchedFile)
-            log("Writing existing file untouched: " + newFileName)
-            File.write(newFileName, File.read(file))            
-        else
-            log("Copying Updated Lance File To: " + newFileName)
-            File.write(newFileName, JSON.pretty_generate(jsonObject))
-        end
+        LanceFileProcessor.saveFile(oldLanceFolder, newLanceFolder, jsonObject, file, writeUntouchedFile, @logFile)
     end
 
     #print info and ask for user input
