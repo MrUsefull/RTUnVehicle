@@ -388,9 +388,8 @@ class DefaultMechs
           }"
     }
 
-    DEFAULTCONFIG = 1
 
     def self.getDefaultMech(type)
-        DEFAULTMECHLIST.fetch(type, DEFAULTMECHLIST[DEFAULTCONFIG])
+        DEFAULTMECHLIST.fetch(type, DEFAULTMECHLIST[[type.to_f.floor, 10].min])
     end
 end
