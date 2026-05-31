@@ -5,7 +5,7 @@ Forked from [crabtruckington's](https://github.com/crabtruckington/RTUnVehicle) 
 Do you want all the features of RogueTech without having every enemy lance comprised entirely of ridiculously overpowered vehicles?
 Tired of facing 10 VTOLs and 20 vehicles every battle?
 Interested in having Battlemechs be a part of your Battlemech experience?
- Well boy howdy, do I have a script for you!
+ Well boy howdy, is there a script for you!
 
 This script will modify the Lance files in RogueTech to remove vehicles from nearly every Lance type, except lances that are only comprised of vehicles, and specialty lances made for missions where it is intended you fight vehicles.
 
@@ -35,7 +35,7 @@ As of version 1.2, this script now has the optional ability to completely remove
 
 3. Install dependencies
 
-From project directory
+    From project directory
 
     ```bash
     bundle install
@@ -43,8 +43,9 @@ From project directory
 
 ## Roadmap
 
-[ ] Add options to remove or tone down the amount of battle armor seen.
-[ ] Easier install/uninstall experience.
+- [ ] Add options to remove or tone down the amount of battle armor seen.
+- [ ] Easier install/uninstall experience.
+- [ ] Tagged releases
 
 ## Disclaimer
 
