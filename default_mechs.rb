@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-class DefaultMechs
-  DEFAULTMECHLIST =
-    {
-      1 => "{
+DEFAULTMECHLIST =
+  {
+    1 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -44,7 +43,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      2 => "{
+    2 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -86,7 +85,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      3 => "{
+    3 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -126,7 +125,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      4 => "{
+    4 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -163,7 +162,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      5 => "{
+    5 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -201,7 +200,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      6 => "{
+    6 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -238,7 +237,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      7 => "{
+    7 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -276,7 +275,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      8 => "{
+    8 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -314,7 +313,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      9 => "{
+    9 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -351,7 +350,7 @@ class DefaultMechs
             \"locked\": false
           }",
 
-      10 => "{
+    10 => "{
             \"unitType\": \"Mech\",
             \"unitId\": \"Tagged\",
             \"unitSimGameID\": null,
@@ -388,8 +387,9 @@ class DefaultMechs
             },
             \"locked\": false
           }"
-    }.freeze
+  }.freeze
 
+class DefaultMechs
   DEFAULT_LEVEL = 10
 
   def self.get_default_mech(type)
