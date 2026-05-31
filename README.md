@@ -5,7 +5,7 @@ Forked from [crabtruckington's](https://github.com/crabtruckington/RTUnVehicle) 
 Do you want all the features of RogueTech without having every enemy lance comprised entirely of ridiculously overpowered vehicles?
 Tired of facing 10 VTOLs and 20 vehicles every battle?
 Interested in having Battlemechs be a part of your Battlemech experience?
- Well boy howdy, is there a script for you!
+Well boy howdy, is there a script for you!
 
 This script will modify the Lance files in RogueTech to remove vehicles from nearly every Lance type, except lances that are only comprised of vehicles, and specialty lances made for missions where it is intended you fight vehicles.
 
@@ -14,9 +14,9 @@ As of version 1.2, this script now has the optional ability to completely remove
 ## Usage
 
 1) Download Ruby from [https://www.ruby-lang.org/en/downloads/](https://www.ruby-lang.org/en/downloads/). 4.0.5 is the current recommended version, anything 3.2 and above should work.
-2) Download this ruby script, `RTUnvehicle.rb`, and the companion file `DefaultMechs.rb` and place them in their own directory, I recommend something like `C:\rtUnVehicle`
-3) Go to your BattleTech installation folder, and copy `\Mods\RogueTech Core\Lances` into the same directory as `RTUnvehicle.rb`
-4) Open a cmd prompt, navigate to the directory you placed the `Lances` folder and `rtUnvehicle.rb`, and type `ruby RTUnvehicle.rb` to run the script
+2) Clone this repository
+3) Go to your BattleTech installation folder, and copy `\Mods\RogueTech Core\Lances` into the same directory as `rt_unvehicle.rb`.
+4) Run `ruby ./rt_unvehicle.rb` from the repository root.
 5) Follow the instructions provided to copy the new Lance files into the RT directory.
 6) Enjoy the game about mechs not having 90% of the spawns be vehicles!
 
@@ -45,6 +45,10 @@ As of version 1.2, this script now has the optional ability to completely remove
 
 - [ ] Add options to remove or tone down the amount of battle armor seen.
 - [ ] Easier install/uninstall experience.
+  - [ ] Ruby gem
+  - [ ] Release with installer
+- [ ] Remove a configurable percentage of vehicle/vtol/ba
+- [ ] Dynamic vehicle to mech replacement, replace a vehicle with "nearby" mechs when possible. Making for a more engaging player experience.
 - [ ] Tagged releases
 
 ## Disclaimer
